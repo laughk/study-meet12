@@ -10,6 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "https://github.com/2creatives/vagrant-centos/releases/download/v6.5.3/centos65-x86_64-20140116.box"
 
   config.ssh.forward_agent = true
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+
 
   config.vm.define :node_setagaya12 do |node_setagaya12|
   end
